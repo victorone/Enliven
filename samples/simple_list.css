@@ -1,0 +1,20 @@
+body {
+	background-color: darkgrey;
+	text-color: white;
+}
+.animal_table {
+	border: 2pt solid;
+	background-color: green;
+}
+
+.animal_row {
+	background-color: white;
+}
+
+.animal_name {
+	font-weight: bold; 
+}
+
+.animal_species {
+	font-style: italic;
+}
