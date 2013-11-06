@@ -23,3 +23,7 @@ The goal is that the designer's deliverables live *completely intact* throughout
 Lofty goal? Perhaps, but if solved, Enliven could make lives so much easier for a lot of teams currently suffering from this dichotomy.
 
 There is also a goal of keeping Enliven back end agnostic, although the intention is to provide "plugins" for common back end scenarios, such as CouchDB and Ruby REST services.
+
+## Code
+
+The code is written in CoffeeScript, and translated to JavaScript. The generated file is also part of this repository, in the *build* directory, to simplify its use.
