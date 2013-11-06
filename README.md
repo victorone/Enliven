@@ -27,3 +27,12 @@ There is also a goal of keeping Enliven back end agnostic, although the intentio
 ## Code
 
 The code is written in CoffeeScript, and translated to JavaScript. The generated file is also part of this repository, in the *build* directory, to simplify its use.
+
+If you want to make changes to the code, you install CoffeeScript and then
+run `compile.sh` whenever you have changed the logic. This will generate the
+proper JS file.
+
+## Examples
+
+Look at the simple example in `samples`; just open the `simple_list.html` in
+a browser and enjoy.

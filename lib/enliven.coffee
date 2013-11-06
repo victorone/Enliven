@@ -2,19 +2,20 @@
 # Copyright 2011, Victor1 LLC
 # Author: David Bergman
 
+root = exports ? this
 
 # Delete all sample data, which is marked with a class 'delete'
-delete_samples = -> $('.delete').remove()
+root.delete_samples = -> $('.delete').remove()
 
 # Populate a JSON list, using the given class as top element(s),
 # using a sub element with class 'proto'.
 # The list is assumed to be an array with each element
 # have a 'value' property which is the actual data.
-populate_list = (root, list) ->
+root.populate_list = (root, list) ->
 	proto = $ '.proto', root
 	for row in list
 		elem = proto.clone()
-		populate_elem elem, list[row].value
+		populate_elem elem, row.value
 		proto.after elem
 	proto.remove()
 
@@ -24,8 +25,8 @@ populate_list = (root, list) ->
 # If such an element has a class 'attr_<name>',
 # we set the attribute name, and if not,
 # we use the text node
-populate_elem = (root, data) ->
-	for prop in data
+root.populate_elem = (root, data) ->
+	for prop of data
 		elem = $('.prop_' + prop, root)
 		value = data[prop]
 		classStr = elem.attr('class')
